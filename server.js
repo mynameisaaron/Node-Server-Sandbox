@@ -63,9 +63,26 @@ app.get('/about', (req,res)=>{
        
     }
 
+
+
     console.log(timeObject);
 
     res.render('about.hbs', timeObject);
+});
+
+
+
+
+app.get('/projects', (req,res)=>{
+    
+    var dynamicObject = {
+        title : "Project Page",
+        greeting : "Welcome to the project Page"
+    }
+    
+    res.render('projects.hbs', dynamicObject);
+
+
 });
 
 
